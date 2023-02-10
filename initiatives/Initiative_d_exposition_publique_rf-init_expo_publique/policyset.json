@@ -1,0 +1,43 @@
+{
+ "properties": {
+  "displayName": "Initiative d'exposition publique",
+  "policyType": "Custom",
+  "description": "",
+  "metadata": {
+   "createdBy": "1335e91a-138a-4001-8c59-88580bb3ab89",
+   "createdOn": "2023-02-10T21:53:25.6442289Z",
+   "updatedBy": "165a6c73-06b3-4e0f-a08e-785e5627a5a1",
+   "updatedOn": "2023-02-10T22:03:30.8932315Z"
+  },
+  "parameters": {
+   "Param1": {
+    "type": "string",
+    "metadata": {
+     "displayName": "Param 1",
+     "description": "Param 1 desc"
+    },
+    "allowedValues": [
+     "Audit",
+     "Deny"
+    ],
+    "defaultValue": "Audit"
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "11984970376323288320",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/e55152b4-ddfa-4025-a3f4-7ff915114189/providers/Microsoft.Authorization/policyDefinitions/rf-restrict_storage_account_firewall_ip",
+    "parameters": {
+     "policyEffect": {
+      "value": "[parameters('Param1')]"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/e55152b4-ddfa-4025-a3f4-7ff915114189/providers/Microsoft.Authorization/policySetDefinitions/rf-init_expo_publique",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "rf-init_expo_publique"
+}
